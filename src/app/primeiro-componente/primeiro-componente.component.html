@@ -1,0 +1,35 @@
+<div class="conteiner">
+    <h1>Ativiade-Angular</h1>
+
+    <h6>Aluno: {{aluno}}</h6>
+    <h6>Idade: {{idade}}</h6>
+    <h6>Turma: {{turma}}</h6>
+
+    <pre>
+        <button class="btnEx" (click)="mensagem()">O que é o trabalho ?</button>
+    </pre>
+
+    <div class="conteiner1">
+        <img [src]="imagem" class="imagens">
+        <button (click)="alterarImagem()">Operadores</button>
+        <img [src]="imagem1" class="imagens">
+    </div>
+
+    <br>
+
+    <label for="numero1">Primeiro numero: </label>
+    <input type="number" id="numero1" [(ngModel)]="numero1" name="nuemro1">
+
+    <label for="numero2">Segundo numero: </label>
+    <input type="number" id="numero2" [(ngModel)]="numero2" name="nuemro2">
+
+    <button (click)="calculo()">Calcular</button>
+
+    <h5>Resultados: </h5>
+
+    <ul>
+        <li *ngFor="let n of resultados">
+            {{n}} -
+        </li>
+    </ul>
+</div>
